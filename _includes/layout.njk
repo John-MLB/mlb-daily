@@ -5,12 +5,11 @@
   <title>{{ title }}</title>
 </head>
 <body>
-  <p>
-    {% if prev %}<a href="/mlb-daily/posts/{{ prev }}">← 前一日{% endif %}
-    <a href="/mlb-daily/">返回首頁</a>
-    {% if next %}後一日 →</a>{% endif %}
-  </p>
-
+<p>
+  {% if prev %}<a href="{{ '/posts/' + prev | url }}">← 前一日</a>{% endif %}
+  <a href="{{ '/' | url }}">返回首頁</a>
+  {% if next %}<a href="{{ '/posts/' + next | url }}">後一日 →</a>{% endif %}
+</p>
   <h1>{{ title }}</h1>
   {{ content | safe }}
 
