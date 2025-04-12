@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>MLB 每日摘要索引</title>
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <h1>MLB 每日摘要索引</h1>
@@ -11,11 +11,10 @@
   <ul>
     {% for post in collections.post | reverse %}
       <li>
-<a href="{{ post.url | url }}">{{ post.data.title }}</a>
+        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
       </li>
     {% endfor %}
   </ul>
   <p>© John, MLB Digest</p>
 </body>
 </html>
-

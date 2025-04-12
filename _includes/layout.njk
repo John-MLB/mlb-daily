@@ -1,8 +1,16 @@
-<a href="{{ '/posts/' + prev | url }}">← 前一日</a>
-<a href="{{ '/' | url }}">返回首頁</a>
-<a href="{{ '/posts/' + next | url }}">後一日 →</a>
-
-<h1>{{ title }}</h1>
-{{ content | safe }}
-
-<p>© John, MLB Digest</p>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="{{ '/styles.css' | url }}">
+</head>
+<body>
+  <a href="{{ prev | url }}">← 前一日</a>
+  <a href="{{ '/' | url }}">返回首頁</a>
+  <a href="{{ next | url }}">後一日 →</a>
+  <h1>{{ title }}</h1>
+  {{ content | safe }}
+  <p>© John, MLB Digest</p>
+</body>
+</html>
